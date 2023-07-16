@@ -12,11 +12,12 @@ const ContactsScreen = () => {
       setUsers(result.data?.listUsers?.items);
     });
   }, []);
+
   return (
       <FlatList
           data={users}
           renderItem={({ item }) => <ContactListItem user={item} />}
-          style={{ backgroundColor: 'white' }}
+          style={{ backgroundColor: "white" }}
       />
   );
 };
